@@ -24,9 +24,8 @@ public class addTaskServlet extends HttpServlet {
             deadLine = req.getParameter("task_dd");
             status = req.getParameter("task_status");
         } catch (Exception e) {
-
         }
-        if((name!=null) && (description!=null) && (deadLine !=null) && (status.equals("Да"))) {
+        if((name!=null) && (description!=null) && (deadLine !=null)) {
             Tasks tasks = new Tasks();
             tasks.setName(name);
             tasks.setDescription(description);
